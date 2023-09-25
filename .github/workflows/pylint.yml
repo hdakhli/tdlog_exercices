@@ -2,7 +2,7 @@ name: Check quality and unit tests
 
 on:
   pull_request:
-    types: [opened, reopened, edited, review_requested]
+    types: [opened, reopened, edited, synchronize, review_requested]
   push:
     branches:
       - main
