@@ -28,3 +28,13 @@ fixed_tests_False = (
     ( "spam",    "eggs"  )
 )
 """
+
+def solution(string1: str, string2: str):
+	if string1 == string2 or len(string2) == 0:
+		return True
+	elif len(string2) < len(string1):
+		for i in range(-1,-len(string2)-1, -1):
+			if string2[i] != string1[i]:
+				return False
+		return True
+	return False
