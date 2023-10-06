@@ -28,3 +28,14 @@ fixed_tests_False = (
     ( "spam",    "eggs"  )
 )
 """
+def solution(chaine, fin):
+    if len(chaine) < len(fin):
+        return False
+    indice_fin = len(fin) - 1
+    for i in range(len(chaine) - 1, len(chaine) - len(fin) - 1, -1):
+        if chaine[i] != fin[indice_fin]:
+            return False
+        indice_fin -= 1
+    return True
+
+
