@@ -28,3 +28,34 @@ fixed_tests_False = (
     ( "spam",    "eggs"  )
 )
 """
+
+def solution(string, ending):
+    return string.endswith(ending)
+
+# Tests True
+fixed_tests_True = (
+    ("samurai", "ai"),
+    ("ninja", "ja"),
+    ("sensei", "i"),
+    ("abc", "abc"),
+    ("abcabc", "bc"),
+    ("fails", "ails"),
+)
+
+# Tests False
+fixed_tests_False = (
+    ("sumo", "omo"),
+    ("samurai", "ra"),
+    ("abc", "abcd"),
+    ("ails", "fails"),
+    ("this", "fails"),
+    ("spam", "eggs"),
+)
+
+for test in fixed_tests_True:
+    result = solution(*test)
+    print(f"String: '{test[0]}' Ends with '{test[1]}': {result}")
+
+for test in fixed_tests_False:
+    result = solution(*test)
+    print(f"String: '{test[0]}' Ends with '{test[1]}': {result}")
