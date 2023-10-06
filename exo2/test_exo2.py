@@ -1,15 +1,6 @@
-"""
-Complete the solution so that it returns true if the first argument(string)
-passed in ends with the 2nd argument (also a string).
+import unittest
+from exo2 import solution 
 
-Examples:
-
-    solution('abc', 'bc') # returns true
-    solution('abc', 'd') # returns false
-"""
-
-"""
-Create unit test using those cases:
 fixed_tests_True = (
     ( "samurai", "ai"    ),
     ( "ninja",   "ja"    ),
@@ -18,7 +9,6 @@ fixed_tests_True = (
     ( "abcabc",  "bc"    ),
     ( "fails",   "ails"  ),
 )
-
 fixed_tests_False = (
     ( "sumo",    "omo"   ),
     ( "samurai", "ra"    ),
@@ -27,10 +17,11 @@ fixed_tests_False = (
     ( "this",    "fails" ),
     ( "spam",    "eggs"  )
 )
-"""
-def solution(a,b):
-    if a[-len(b):] == b :
-        return True
-    else:
-        return False
 
+class Exo2Test(unittest.TestCase):
+    
+    for i in fixed_tests_True:
+        print (f' {i}:{solution(i[0],i[1])}')
+    for i in fixed_tests_False:
+        print (f' {i}:{solution(i[0],i[1])}')
+unittest.main()
