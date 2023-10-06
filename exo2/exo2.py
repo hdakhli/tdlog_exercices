@@ -28,3 +28,17 @@ fixed_tests_False = (
     ( "spam",    "eggs"  )
 )
 """
+class Solution:
+    def __init__(self, word1, word2):
+        self.word1 = word1
+        self.word2 = word2
+
+    def verify(self):
+        for i in range(len(self.word1)):
+            a = self.word1[i:]
+            if self.word2 in a:
+                return True
+        return False
+
+solution = Solution("abc", "c")
+print(solution.verify())
