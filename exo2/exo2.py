@@ -1,15 +1,6 @@
-"""
-Complete the solution so that it returns true if the first argument(string)
-passed in ends with the 2nd argument (also a string).
+def solution(word:str, end:str):
+    return word.endswith(end)
 
-Examples:
-
-    solution('abc', 'bc') # returns true
-    solution('abc', 'd') # returns false
-"""
-
-"""
-Create unit test using those cases:
 fixed_tests_True = (
     ( "samurai", "ai"    ),
     ( "ninja",   "ja"    ),
@@ -27,4 +18,12 @@ fixed_tests_False = (
     ( "this",    "fails" ),
     ( "spam",    "eggs"  )
 )
-"""
+
+
+for test in fixed_tests_True:
+    input_str, ending_str = test
+    assert solution(input_str, ending_str) == True
+
+for test2 in fixed_tests_False:
+    input_str, ending_str = test2
+    assert solution(input_str, ending_str) == False
