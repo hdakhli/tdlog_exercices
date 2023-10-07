@@ -28,3 +28,17 @@ fixed_tests_False = (
     ( "spam",    "eggs"  )
 )
 """
+
+def solution(string, ending):
+    end_of_string = string[-len(ending):]
+    if end_of_string == ending:
+        return True
+    else :
+        return False
+   
+    
+
+    
+    
+
+
