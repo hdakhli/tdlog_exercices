@@ -39,5 +39,10 @@ La chaîne OK si le backlog est vide. Sinon retourner la chaîne KO.
 
 
 def processLines(lines) -> str:
-    # Implementer votre réponse ici
-    return "OK"
+        remaining_tasks = int(lines[1][:-1])
+        for line in lines[2:]:
+                tasks_done, tasks_added = line.split()[0], line.split()[1]
+                remaining_tasks -= int(tasks_done) - int(tasks_added)
+        if remaining_tasks == 0:
+                return "OK"
+        return "KO"
