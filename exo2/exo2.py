@@ -14,7 +14,7 @@ fixed_tests_True = (
     ( "samurai", "ai"    ),
     ( "ninja",   "ja"    ),
     ( "sensei",  "i"     ),
-    ( "abc",     "abc"   ),
+    ( "abc",     "abc"   ),+++++++++++
     ( "abcabc",  "bc"    ),
     ( "fails",   "ails"  ),
 )
@@ -28,3 +28,12 @@ fixed_tests_False = (
     ( "spam",    "eggs"  )
 )
 """
+def solution(string,suffix):
+    if len(string)<len(suffix):
+        return False
+    for i in range(len(suffix)):
+        if string[-i-1]!=suffix[-i-1]:
+            return False
+    return True
+
+print(solution('abc', 'bc'))
