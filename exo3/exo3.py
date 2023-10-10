@@ -39,5 +39,20 @@ La chaîne OK si le backlog est vide. Sinon retourner la chaîne KO.
 
 
 def processLines(lines) -> str:
-    # Implementer votre réponse ici
-    return "OK"
+    # implementer votre réponse ici
+    sprint_number = int(lines[0])
+    last_day_project_info = [
+        int(temp)
+        for temp in lines[sprint_number + 1].split()
+        if temp.isdigit()]
+
+    if last_day_project_info[1] == 0:
+        return "OK"
+    else:
+        return "KO"
+
+
+with open("sample/input1.txt") as input1:
+    lines = input1.readlines()
+
+print(processLines(lines))
