@@ -12,7 +12,7 @@ class TestExo3(unittest.TestCase):
             expected = output1.read()
 
         self.assertEqual(expected, processLines(lines))
-    
+
     def test_input_2(self):
         with open("exo3/sample/input2.txt") as input2:
             lines = input2.readlines()
@@ -23,6 +23,7 @@ class TestExo3(unittest.TestCase):
         self.assertEqual(expected, processLines(lines))
 
     # Ecrire une autre méthode pour vérifier le second use case
+
 
 if __name__ == '__main__':
     unittest.main()
