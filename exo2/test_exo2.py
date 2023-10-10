@@ -1,8 +1,9 @@
 import unittest
 from exo2 import EndCompare
 
+
 class Exo2Test(unittest.TestCase):
-    
+
     def test_endComparaison_true_cases(self):
         fixed_tests_True = (
             ("samurai", "ai"),
@@ -16,7 +17,6 @@ class Exo2Test(unittest.TestCase):
             input_str, ending_str = test_case
             self.assertTrue(EndCompare.endComparaison(input_str, ending_str))
 
-
     def test_endComparaison_false_cases(self):
         fixed_tests_False = (
             ("sumo", "omo"),
@@ -29,6 +29,7 @@ class Exo2Test(unittest.TestCase):
         for test_case in fixed_tests_False:
             input_str, ending_str = test_case
             self.assertFalse(EndCompare.endComparaison(input_str, ending_str))
+
 
 if __name__ == '__main__':
     unittest.main()
