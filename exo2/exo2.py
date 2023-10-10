@@ -7,24 +7,15 @@ Examples:
     solution('abc', 'bc') # returns true
     solution('abc', 'd') # returns false
 """
+import string
 
-"""
-Create unit test using those cases:
-fixed_tests_True = (
-    ( "samurai", "ai"    ),
-    ( "ninja",   "ja"    ),
-    ( "sensei",  "i"     ),
-    ( "abc",     "abc"   ),
-    ( "abcabc",  "bc"    ),
-    ( "fails",   "ails"  ),
-)
 
-fixed_tests_False = (
-    ( "sumo",    "omo"   ),
-    ( "samurai", "ra"    ),
-    ( "abc",     "abcd"  ),
-    ( "ails",    "fails" ),
-    ( "this",    "fails" ),
-    ( "spam",    "eggs"  )
-)
-"""
+def solution(first_string: string, second_string: string) -> string:
+    second_string_len = len(second_string)
+    first_string_end = first_string[-second_string_len:]
+
+    return first_string_end == second_string
+
+
+print(solution('abc', 'bc'))
+print(solution('abc', 'd'))
