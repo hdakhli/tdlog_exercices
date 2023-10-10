@@ -28,3 +28,7 @@ fixed_tests_False = (
     ( "spam",    "eggs"  )
 )
 """
+class EndCompare:
+    @staticmethod
+    def endComparaison(input_str, ending_str):
+        return input_str.endswith(ending_str)
