@@ -41,3 +41,27 @@ La chaîne OK si le backlog est vide. Sinon retourner la chaîne KO.
 def processLines(lines) -> str:
     # Implementer votre réponse ici
     return "OK"
+
+def verif_backlog(N, T, data):
+    backlog = T
+    for i in range(N):
+        V, U = data[i]
+        backlog += U - V
+        if backlog < 0:
+            return "KO"
+    if backlog == 0:
+        return "OK"
+    else:
+        return "KO"
+
+# Lecture des données
+N = int(input())
+T = int(input())
+data = [list(map(int, input().split())) for _ in range(N)]
+
+# Appel de la fonction
+resultat = verif_backlog(N, T, data)
+
+# Affichage du résultat
+print(resultat)
+
