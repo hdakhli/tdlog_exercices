@@ -14,3 +14,11 @@ class TestExo3(unittest.TestCase):
         self.assertEqual(expected, processLines(lines))
 
     # Ecrire une autre méthode pour vérifier le second use case
+def test_input_2(self):
+    with open("sample/input2.txt") as input2:
+        lines = input2.readlines()
+
+    with open("sample/output2.txt") as output2:
+        expected = output2.read()
+
+    self.assertEqual(expected, processLines(lines))
