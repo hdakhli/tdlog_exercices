@@ -7,6 +7,8 @@ Examples:
     solution('abc', 'bc') # returns true
     solution('abc', 'd') # returns false
 """
+def solution(string, ending):
+    return string.endswith(ending)
 
 """
 Create unit test using those cases:
