@@ -2,7 +2,6 @@ import unittest
 
 from exo3 import processLines
 
-
 class TestExo3(unittest.TestCase):
     def test_input_1(self):
         with open("exo3/sample/input1.txt") as input1:
