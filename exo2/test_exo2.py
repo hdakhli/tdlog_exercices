@@ -20,12 +20,13 @@ fixed_tests_False = (
 """
 import unittest
 
-from exo1 import Item
+from exo2 import solution
 
 
-class Exo1Test(unittest.TestCase):
+class Exo2Test(unittest.TestCase):
 
-    def test_item_construction(self):
-        item = Item(10, 20)
-
-        self.assertEqual(20, item.weight)
+    def test_solution(self):
+        fixed_test_true = solution("samurai", "ai")
+        self.assertEqual(True, fixed_test_true)
+        fixed_test_false = solution("samurai", "tai")
+        self.assertEqual(False, fixed_test_false)
