@@ -28,3 +28,16 @@ fixed_tests_False = (
     ( "spam",    "eggs"  )
 )
 """
+import unittest
+
+class TestSolution(unittest.TestCase):
+    def test_true_cases(self):
+        for string, ending in fixed_tests_True:
+            self.assertTrue(solution(string, ending), f"Expected True for '{string}' and '{ending}'")
+
+    def test_false_cases(self):
+        for string, ending in fixed_tests_False:
+            self.assertFalse(solution(string, ending), f"Expected False for '{string}' and '{ending}'")
+
+if __name__ == "__main__":
+    unittest.main()
