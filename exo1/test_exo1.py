@@ -1,11 +1,11 @@
 import unittest
-
 from exo1 import Item
 
+class TestItem(unittest.TestCase):
+    def test_item_creation(self):
+        item = Item("Widget", 10.0)
+        self.assertEqual(item.name, "Widget")
+        self.assertEqual(item.price, 10.0)
 
-class Exo1Test(unittest.TestCase):
-
-    def test_item_construction(self):
-        item = Item(10, 20)
-
-        self.assertEqual(20, item.weight)
+if __name__ == '__main__':
+    unittest.main()
