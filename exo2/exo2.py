@@ -28,3 +28,14 @@ fixed_tests_False = (
     ( "spam",    "eggs"  )
 )
 """
+
+def Solution(Text1,Text2):
+    compt=0
+    j=len(Text2)
+    for i in range(j):
+        if Text2[i]==Text1[-j]:
+            compt+=1 
+            j-=1  
+    return compt==len(Text2)
+
+print(Solution("bonjour","jour"))
