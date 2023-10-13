@@ -1,0 +1,14 @@
+{
+    "python.testing.pytestArgs": [
+        "exo1"
+    ],
+    "python.testing.unittestEnabled": true,
+    "python.testing.pytestEnabled": false,
+    "python.testing.unittestArgs": [
+        "-v",
+        "-s",
+        "./exo1",
+        "-p",
+        "test_*.py"
+    ]
+}
