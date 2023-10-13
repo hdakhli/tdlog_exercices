@@ -1,4 +1,4 @@
-"""
+q"""
 Une méthode agile est une approche itérative et collaborative pour
 mener à bien un projet.
 Elle génère un produit de haute qualité tout en prenant en compte
