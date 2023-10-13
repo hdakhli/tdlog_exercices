@@ -28,3 +28,13 @@ fixed_tests_False = (
     ( "spam",    "eggs"  )
 )
 """
+
+
+def Verification(chain1, chain2):
+    if len(chain1) < len(chain2):
+        return False  # La première chaîne est plus courte que la deuxième, donc elles ne peuvent pas correspondre
+
+    # Compare la fin de la première chaîne avec la deuxième chaîne
+    return chain1[-len(chain2):] == chain2
+
+
