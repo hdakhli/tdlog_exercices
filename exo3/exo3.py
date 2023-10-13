@@ -41,3 +41,29 @@ La chaîne OK si le backlog est vide. Sinon retourner la chaîne KO.
 def processLines(lines) -> str:
     # Implementer votre réponse ici
     return "OK"
+
+def determine_satisfaction(N, T, updates):
+    backlog = T  # Initial backlog size
+    
+    for i in range(N):
+        V, U = updates[i]
+        backlog += U  # Add or remove tasks
+        backlog -= V  # Deduct the completed tasks during the sprint
+        
+        if backlog < 0:
+            return "KO"  # Backlog is negative, the client is not satisfied
+    
+    if backlog == 0:
+        return "OK"  # Backlog is empty, the client is satisfied
+    else:
+        return "KO"  # Backlog is not empty, the client is not satisfied
+
+# Reading input
+N = int(input())
+T = int(input())
+updates = [list(map(int, input().split())) for _ in range(N)]
+
+# Get the result
+result = determine_satisfaction(N, T, updates)
+print(result)
+
