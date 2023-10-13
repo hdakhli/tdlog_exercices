@@ -7,9 +7,10 @@ Examples:
     solution('abc', 'bc') # returns true
     solution('abc', 'd') # returns false
 """
+def solution(string, ending):
+    return string.endswith(ending)   
 
-"""
-Create unit test using those cases:
+
 fixed_tests_True = (
     ( "samurai", "ai"    ),
     ( "ninja",   "ja"    ),
@@ -27,4 +28,12 @@ fixed_tests_False = (
     ( "this",    "fails" ),
     ( "spam",    "eggs"  )
 )
-"""
+for string,ending in fixed_tests_True:
+    assert solution(string, ending) == True
+for string, ending in fixed_tests_False:
+    assert solution(string, ending) == False
+print("All tests passed")
+
+
+
+
