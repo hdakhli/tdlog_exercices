@@ -24,3 +24,4 @@ class TestExo3(unittest.TestCase):
 
         self.assertEqual(expected, processLines(lines))
         
+        
