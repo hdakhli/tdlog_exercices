@@ -8,8 +8,8 @@ Examples:
     solution('abc', 'd') # returns false
 """
 
-"""
-Create unit test using those cases:
+
+#Create unit test using those cases:
 fixed_tests_True = (
     ( "samurai", "ai"    ),
     ( "ninja",   "ja"    ),
@@ -27,4 +27,23 @@ fixed_tests_False = (
     ( "this",    "fails" ),
     ( "spam",    "eggs"  )
 )
-"""
+
+import unittest
+
+def solution(string, ending):
+    return string.endswith(ending)
+
+class TestSolution(unittest.TestCase):
+
+    def test_solution_true(self):
+        for test in fixed_tests_True:
+            self.assertTrue(solution(*test))
+
+    def test_solution_false(self):
+        for test in fixed_tests_False:
+            self.assertFalse(solution(*test))
+
+if __name__ == '__main__':
+    unittest.main()
+    
+    
