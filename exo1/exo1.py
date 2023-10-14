@@ -15,3 +15,4 @@ class Item:
 i = Item(10, 20)
 
 print(i.price, i.weight)
+

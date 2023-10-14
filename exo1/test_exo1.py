@@ -11,3 +11,4 @@ class Exo1Test(unittest.TestCase):
         self.assertEqual(10, item.price)
         
 unittest.main()
+
