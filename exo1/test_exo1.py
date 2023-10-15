@@ -1,6 +1,7 @@
 import unittest
 
-from exo1 import Item
+from exo
+
 
 
 class Exo1Test(unittest.TestCase):
