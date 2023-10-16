@@ -1,49 +1,29 @@
-
-"""
-Create unit test using those cases:
-fixed_tests_True = (
-    ( "samurai", "ai"    ),
-    ( "ninja",   "ja"    ),
-    ( "sensei",  "i"     ),
-    ( "abc",     "abc"   ),
-    ( "abcabc",  "bc"    ),
-    ( "fails",   "ails"  ),
-)
-
-fixed_tests_False = (
-    ( "sumo",    "omo"   ),
-    ( "samurai", "ra"    ),
-    ( "abc",     "abcd"  ),
-    ( "ails",    "fails" ),
-    ( "this",    "fails" ),
-    ( "spam",    "eggs"  )
-)
-"""
-
 import unittest
 
 from exo2 import solution
 
 fixed_tests_True = (
-    ( "samurai", "ai"    ),
-    ( "ninja",   "ja"    ),
-    ( "sensei",  "i"     ),
-    ( "abc",     "abc"   ),
-    ( "abcabc",  "bc"    ),
-    ( "fails",   "ails"  ),
+    ("samurai", "ai"),
+    ("ninja", "ja"),
+    ("sensei", "i"),
+    ("abc", "abc"),
+    ("abcabc", "bc"),
+    ("fails", "ails"),
 )
 
 fixed_tests_False = (
-    ( "sumo",    "omo"   ),
-    ( "samurai", "ra"    ),
-    ( "abc",     "abcd"  ),
-    ( "ails",    "fails" ),
-    ( "this",    "fails" ),
-    ( "spam",    "eggs"  )
+    ("sumo", "omo"),
+    ("samurai", "ra"),
+    ("abc", "abcd"),
+    ("ails", "fails"),
+    ("this", "fails"),
+    ("spam", "eggs")
 )
 
+
 class Exo2Test(unittest.TestCase):
-    
+
+
     def test_solution_True(self):
         for string, ending in fixed_tests_True:
             self.assertTrue(solution(string, ending))
@@ -54,4 +34,3 @@ class Exo2Test(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-

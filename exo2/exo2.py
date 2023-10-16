@@ -8,8 +8,5 @@ Examples:
     solution('abc', 'd') # returns false
 """
 
-
-
 def solution(string, ending):
     return string.endswith(ending)
-
