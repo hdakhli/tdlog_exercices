@@ -39,13 +39,13 @@ La chaîne OK si le backlog est vide. Sinon retourner la chaîne KO.
 
 
 def processLines(lines) -> str:
-        nbSprints = int(lines[0])
-        nbTasks = int(lines[1])
-        backlog = nbTasks
-        for i in range(nbSprints):
-                backlog += int(lines[i+2].split()[1])
-                backlog -= int(lines[i+2].split()[0])
-        if backlog == 0:
-                return "OK"
-        else:
-                return "KO"
+    nbSprints = int(lines[0])
+    nbTasks = int(lines[1])
+    backlog = nbTasks
+    for i in range(nbSprints):
+            backlog += int(lines[i+2].split()[1])
+            backlog -= int(lines[i+2].split()[0])
+    if backlog == 0:
+            return "OK"
+    else:
+            return "KO"
