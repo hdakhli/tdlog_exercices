@@ -23,7 +23,6 @@ fixed_tests_False = (
 
 class Exo2Test(unittest.TestCase):
 
-
     def test_solution_True(self):
         for string, ending in fixed_tests_True:
             self.assertTrue(solution(string, ending))
@@ -31,6 +30,7 @@ class Exo2Test(unittest.TestCase):
     def test_solution_False(self):
         for string, ending in fixed_tests_False:
             self.assertFalse(solution(string, ending))
+
 
 if __name__ == '__main__':
     unittest.main()
