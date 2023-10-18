@@ -4,8 +4,7 @@ from exo1 import Item
 
 
 class Exo1Test(unittest.TestCase):
-
-
+    
     def test_item_construction(self):
         item = Item(10, 20)
 
@@ -15,6 +14,7 @@ class Exo1Test(unittest.TestCase):
         item = Item(10, 20)
 
         self.assertEqual(10, item.price)
+
 
 if __name__ == '__main__':
     unittest.main()
