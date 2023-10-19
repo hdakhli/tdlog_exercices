@@ -11,10 +11,3 @@ class Item:
     def __init__(self, price, weight):
         self.price = price
         self.weight = weight
-
-# Example of creating an item:
-i = Item(10, 20)
-
-# Accessing the price and weight attributes of the item:
-print("Price:", i.price)
-print("Weight:", i.weight)
