@@ -1,3 +1,4 @@
+import unittest
 """
 Complete the solution so that it returns true if the first argument(string)
 passed in ends with the 2nd argument (also a string).
@@ -28,3 +29,19 @@ fixed_tests_False = (
     ( "spam",    "eggs"  )
 )
 """
+
+
+def solution(word, part):
+    n = len(part)
+    m = len(word)
+    part2 = ''
+    for i in range(m-n, m):
+        part2 += word[i]
+    if (part == part2):
+        return True
+    else:
+        return False
+
+
+print(solution('samurai', 'ai'))
+assert solution('samurai', 'ai') == True
