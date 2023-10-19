@@ -36,4 +36,3 @@ Sortie
 La chaîne OK si le backlog est vide. Sinon retourner la chaîne KO.
 
 """
-
