@@ -15,6 +15,3 @@ class Exo1Test(unittest.TestCase):
 
         self.assertEqual(10, item.price)
 
-
-if __name__ == '__main__':
-    unittest.main()
