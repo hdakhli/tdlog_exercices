@@ -7,3 +7,8 @@ A new item can be created with Item(price, weight)
     Write the code for this class, with the appropriate constructor.
 Example of code using the class: i = Item(10, 20)
 """
+class Phone:
+    
+    def __init__(self, price : float , weight: float):
+        self._price = price
+        self._weight= weight
