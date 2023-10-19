@@ -9,3 +9,5 @@ class Exo1Test(unittest.TestCase):
         item = Item(10, 20)
 
         self.assertEqual(20, item.weight)
+item = Item(10, 30)
+print(item.weight)
