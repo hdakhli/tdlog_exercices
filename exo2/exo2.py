@@ -1,30 +1,32 @@
-"""
-Complete the solution so that it returns true if the first argument(string)
-passed in ends with the 2nd argument (also a string).
+import unittest
 
-Examples:
+def solution(string, ending):
+    return string.endswith(ending)
 
-    solution('abc', 'bc') # returns true
-    solution('abc', 'd') # returns false
-"""
+class Exo2_Test(unittest.TestCase):
 
-"""
-Create unit test using those cases:
-fixed_tests_True = (
-    ( "samurai", "ai"    ),
-    ( "ninja",   "ja"    ),
-    ( "sensei",  "i"     ),
-    ( "abc",     "abc"   ),
-    ( "abcabc",  "bc"    ),
-    ( "fails",   "ails"  ),
-)
+    def test_true_cases(self):
+        fixed_tests_True = (
+            ("samurai", "ai"),
+            ("ninja", "ja"),
+            ("sensei", "i"),
+            ("abc", "abc"),
+            ("abcabc", "bc"),
+            ("fails", "ails"),
+        )
+        for string, ending in fixed_tests_True:
+            self.assertEqual(solution(string, ending),True)
+    
+    
+    def test_false_cases(self):
+        fixed_tests_False = (
+            ("sumo", "omo"),
+            ("samurai", "ra"),
+            ("abc", "abcd"),
+            ("ails", "fails"),
+            ("this", "fails"),
+            ("spam", "eggs"),
+        )
+        for string, ending in fixed_tests_False:
+            self.assertEqual(solution(string, ending),False)
 
-fixed_tests_False = (
-    ( "sumo",    "omo"   ),
-    ( "samurai", "ra"    ),
-    ( "abc",     "abcd"  ),
-    ( "ails",    "fails" ),
-    ( "this",    "fails" ),
-    ( "spam",    "eggs"  )
-)
-"""
