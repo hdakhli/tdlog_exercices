@@ -22,7 +22,3 @@ class TestExo3(unittest.TestCase):
             expected = output2.read()
 
         self.assertEqual(expected, processLines(lines))
-
-
-if __name__ == '__main__':
-    unittest.main()
