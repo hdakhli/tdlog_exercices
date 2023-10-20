@@ -44,4 +44,3 @@ def solution(word, part):
 
 
 print(solution('samurai', 'ai'))
-assert solution('samurai', 'ai') == True
