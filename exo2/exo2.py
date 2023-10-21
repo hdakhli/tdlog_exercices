@@ -28,3 +28,33 @@ fixed_tests_False = (
     ( "spam",    "eggs"  )
 )
 """
+
+def test_solution():
+    fixed_tests_True = (
+        ("samurai", "ai"),
+        ("ninja", "ja"),
+        ("sensei", "i"),
+        ("abc", "abc"),
+        ("abcabc", "bc"),
+        ("fails", "ails"),
+    )
+
+    fixed_tests_False = (
+        ("sumo", "omo"),
+        ("samurai", "ra"),
+        ("abc", "abcd"),
+        ("ails", "fails"),
+        ("this", "fails"),
+        ("spam", "eggs"),
+    )
+
+    for string, ending in fixed_tests_True:
+        assert solution(string, ending) is True
+
+    for string, ending in fixed_tests_False:
+        assert solution(string, ending) is False
+
+if __name__ == "__main__":
+    test_solution()
+    print("All tests passed!")
+
