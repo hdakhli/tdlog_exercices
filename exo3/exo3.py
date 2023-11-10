@@ -36,8 +36,3 @@ Sortie
 La chaîne OK si le backlog est vide. Sinon retourner la chaîne KO.
 
 """
-
-
-def processLines(lines) -> str:
-    # Implementer votre réponse ici
-    return "OK"
