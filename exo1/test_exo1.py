@@ -9,3 +9,8 @@ class Exo1Test(unittest.TestCase):
         item = Item(10, 20)
 
         self.assertEqual(20, item.weight)
+
+    def test_item_price(self):
+        item = Item(10, 20)
+
+        self.assertEqual(10, item.price)
